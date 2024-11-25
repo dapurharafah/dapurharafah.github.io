@@ -1,0 +1,28 @@
+# Mengizinkan semua bot mesin pencari untuk mengakses konten utama
+User-agent: *
+Disallow:
+
+# Blokir direktori atau file yang tidak penting untuk indeks
+Disallow: /private/
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /backup/
+
+# Blokir parameter URL yang dapat menyebabkan duplikasi konten
+Disallow: /*?*
+Disallow: /*.php$
+Disallow: /*.txt$
+
+# Izinkan semua file gambar, CSS, dan JS (penting untuk rendering SEO modern)
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Lokasi Sitemap (penting untuk membantu crawler)
+Sitemap: https://dapurharafah.github.io/sitemap.xml
